@@ -14,12 +14,7 @@ if(!empty($_POST)){
     
         header("location:index.php"); 
     }else{
-?>
-    <script>
-        alert("驗證碼錯誤，請重新輸入")
-    </script>
-
-<?php
+        $error="驗證碼錯誤，請重新輸入";
     }
 }
 ?>
@@ -58,7 +53,16 @@ if(!empty($_POST)){
                 $_SESSION['veri']=rand(1000,9999);
                 echo $_SESSION['veri'];
             ?>
-        <input type="text" name="veri"></td>
+            <input type="text" name="veri"><br>
+            <span style="color:red;font-size:14px">
+            <?php
+                if(isset($error)){
+                    echo $error;
+                }
+            ?>
+            </span>
+    
+        </td>
     </tr>
     <tr>
         <td><input type="submit" value="送出"></td>
