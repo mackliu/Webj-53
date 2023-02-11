@@ -50,7 +50,27 @@ if(!empty($_POST)){
         <td>Verification：</td>
         <td>
             <?php 
-                $_SESSION['veri']=rand(1000,9999);
+                $veri='';
+                for($i=0; $i<4; $i++){
+                    $type=rand(1,3);
+                    switch($type){
+                        case 1:
+                            //大寫
+                            $veri=$veri.chr(rand(65,90));
+                        break;
+                        case 2:
+                            //小寫
+                            $veri=$veri.chr(rand(97,122));
+                        break;
+                        case 3:
+                            //數字;
+                            $veri=$veri.rand(0,9);
+                        break;
+                    }
+
+                }
+
+                $_SESSION['veri']=$veri;
                 echo $_SESSION['veri'];
             ?>
             <input type="text" name="veri"><br>
