@@ -60,6 +60,10 @@
         <td>2023-02-04</td>
         <td><a href="pra01.php">課堂練習</a></td>
     </tr>
+    <tr>
+        <td>2023-02-11</td>
+        <td><a href="ch5.php">PHP連線資料庫</a></td>
+    </tr>
 </table>
 
 
