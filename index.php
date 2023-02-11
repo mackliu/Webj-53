@@ -66,7 +66,7 @@
     </tr>
     <tr>
         <td>2023-02-11</td>
-        <td><a href="ch5.php">訂票功能與數字驗證</a></td>
+        <td><a href="ch6.php">訂票功能與數字驗證</a></td>
     </tr>
 </table>
 
