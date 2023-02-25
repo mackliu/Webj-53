@@ -7,6 +7,16 @@
     <title>新一代設計展-Tickets</title>
     <link rel="stylesheet" href="./bootstrap/bootstrap.css">
     <link rel="stylesheet" href="./style.css">
+    <style>
+      .veri{
+        padding:2px 8px;
+        border:1px solid black;
+        width:60px;
+        background:url('./img/veri.png');
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
 </head>
 <body>
 <!-- <nav class="navbar navbar-expand-lg justify-content-center px-5"> -->
@@ -30,13 +40,45 @@
     </ul>
 
 </nav>    
-<main></main>
+<main>
+  <form action="tickets.php" method="post" id="form">
+    <table>
+      <tr>
+          <td>first_name：</td>
+          <td><input type="text" name="first_name"></td>
+      </tr>
+      <tr>
+          <td>last_name：</td>
+          <td><input type="text" name="last_name"></td>
+      </tr>
+      <tr>
+          <td>Phone：</td>
+          <td><input type="text" name="phone"></td>
+      </tr>
+      <tr>
+          <td>password：</td>
+          <td><input type="text" name="password"></td>
+      </tr>
+      <tr>
+          <td>Verification：</td>
+          <td>
+            <div class="veri"></div>
+            <input type="text" name="veri">
+          </td>
+      </tr>
+      <tr>
+          <td><input type="submit" value="送出"></td>
+          <td></td>
+      </tr>
+    </table> 
+  
+  </form>    
+</main>
 <footer  class="bg-primary fixed-bottom p-2 text-center w-100">Copyright © 2023 YODEX All Rights Reserved</footer>
-
-
-
-
 <script src="./jquery/jquery.js"></script>
 <script src="./bootstrap/bootstrap.js"></script>
 </body>
 </html>
+<script>
+$(".veri").load("veri.php");
+</script>
