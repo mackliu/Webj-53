@@ -11,10 +11,10 @@
       .veri{
         padding:2px 8px;
         border:1px solid black;
-        width:60px;
         background:url('./img/veri.png');
         background-size: cover;
         background-position: center;
+        font-size:22px;
       }
     </style>
 </head>
@@ -41,34 +41,36 @@
 
 </nav>    
 <main>
+  <h2 class="text-center">訂票中心</h2>
   <form action="tickets.php" method="post" id="form">
-    <table>
-      <tr>
-          <td>first_name：</td>
-          <td><input type="text" name="first_name"></td>
+    <table class="w-25 mt-5 mx-auto">
+      <tr class="form-group">
+          <td class="form-text">first_name：</td>
+          <td><input class="form-control" type="text" name="first_name"></td>
       </tr>
-      <tr>
-          <td>last_name：</td>
-          <td><input type="text" name="last_name"></td>
+      <tr class="form-group">
+          <td class="form-text">last_name：</td>
+          <td><input class="form-control" type="text" name="last_name"></td>
       </tr>
-      <tr>
-          <td>Phone：</td>
-          <td><input type="text" name="phone"></td>
+      <tr class="form-group">
+          <td class="form-text">Phone：</td>
+          <td><input class="form-control" type="text" name="phone"></td>
       </tr>
-      <tr>
-          <td>password：</td>
-          <td><input type="text" name="password"></td>
+      <tr class="form-group">
+          <td class="form-text">password：</td>
+          <td><input class="form-control" type="text" name="password"></td>
       </tr>
-      <tr>
-          <td>Verification：</td>
+      <tr class="form-group">
+          <td class="form-text">Verification：</td>
           <td>
-            <div class="veri"></div>
-            <input type="text" name="veri">
+            <div class="d-flex">
+              <input class="form-control col-9" type="text" name="veri" >
+              <span class="veri col-3"></span>
+            </div>
           </td>
       </tr>
       <tr>
-          <td><input type="submit" value="送出"></td>
-          <td></td>
+          <td colspan="2" class="text-center"><input class="btn btn-primary" type="submit" value="送出"></td>
       </tr>
     </table> 
   
