@@ -30,7 +30,13 @@
     </ul>
 
 </nav>    
-<main></main>
+<main>
+  <div>  Lorem ipsum dolor, sit amet consectetur adipisicing elit. At rem assumenda libero perferendis, saepe exercitationem dicta odit ex tempore velit fuga quas molestiae aliquam earum obcaecati natus ratione reprehenderit modi.</div>
+  <div class="collapse" id="readMore">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quasi, ullam qui iusto nulla aspernatur? Aliquam, eos. Nisi beatae quam in, error amet voluptatum obcaecati dolor facilis molestiae nulla explicabo.
+  </div>
+  <button class="btn btn-primary" data-toggle="collapse" data-target="#readMore" aria-controls="readMore" aria-expened="false" id="btn1">Read More</button>
+</main>
 <footer  class="bg-primary fixed-bottom p-2 text-center w-100">Copyright © 2023 YODEX All Rights Reserved</footer>
 
 
@@ -40,3 +46,13 @@
 <script src="./bootstrap/bootstrap.js"></script>
 </body>
 </html>
+<script>
+$("#readMore").on('show.bs.collapse',()=>{
+  $("#btn1").text("Read Less");
+})
+$("#readMore").on('hide.bs.collapse',()=>{
+  $("#btn1").text("Read More");
+})
+
+
+</script>
