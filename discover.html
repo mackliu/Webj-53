@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新一代設計展-Discover</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      .border-success{
+        border-style: dashed!important;
+        border-left-width: 3px!important;
+        border-bottom-width: 3px!important;
+      }
+    </style>
+</head>
+<body>
+<!-- <nav class="navbar navbar-expand-lg justify-content-center px-5"> -->
+<!-- <nav class="navbar navbar-expand-lg justify-content-around px-5"> -->
+<nav class="navbar navbar-expand-lg navbar-light justify-content-between px-5 bg-primary">
+    <div class="navbar-brand">LOGO</div>
+    <!--ul.navbar-nav>li.nav-item*4-->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+           <a href="home.html" class="nav-link">Home</a> 
+        </li>
+        <li class="nav-item">
+            <a href="news.html" class="nav-link">News</a> 
+        </li>
+        <li class="nav-item active">
+          <a href="discover.html" class="nav-link">Discover</a>  
+        </li>
+        <li class="nav-item">
+          <a href="tickets.html" class="nav-link">Tickets</a>  
+        </li>
+    </ul>
+
+</nav>    
+<main>
+  <div class="event container p-3 border border-success border-top-0 border-right-0 " >
+    <div style="display:inline-block;">
+      <img src="" alt="" style="display:inline-block;width:400px;height:300px;border:1px solid #ddd">
+    </div>
+    <div style="display:inline-block;width:600px">
+      <h2>會展資訊</h2>
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi suscipit iusto sint sapiente itaque praesentium voluptatibus distinctio quidem animi, minima odio sequi. Dolorem enim, eius eligendi necessitatibus maiores quasi minus!</div>
+
+    </div>
+  </div>
+  <div class="show-list container p-3" style="border-right:3px dashed green">
+    <div class="d-inline-block w-50">
+      <h2>作品展示區</h2>
+      
+      <div>  Lorem ipsum dolor, sit amet consectetur adipisicing elit. At rem assumenda libero perferendis, saepe exercitationem dicta odit ex tempore velit fuga quas molestiae aliquam earum obcaecati natus ratione reprehenderit modi.</div>
+      <div class="collapse" id="readMore">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quasi, ullam qui iusto nulla aspernatur? Aliquam, eos. Nisi beatae quam in, error amet voluptatum obcaecati dolor facilis molestiae nulla explicabo.
+      </div>
+      <button class="btn btn-primary" data-toggle="collapse" data-target="#readMore" aria-controls="readMore" aria-expened="false" id="btn1">Read More</button>
+    </div>
+    <div class="d-inline-block" >
+      <img src="" alt="" style="display:inline-block;width:400px;height:300px;border:1px solid #ddd">
+
+    </div>
+  </div>
+</main>
+<footer  class="bg-primary fixed-bottom p-2 text-center w-100">Copyright © 2023 YODEX All Rights Reserved</footer>
+
+
+
+
+<script src="./jquery/jquery.js"></script>
+<script src="./bootstrap/bootstrap.js"></script>
+</body>
+</html>
+<script>
+$("#readMore").on('show.bs.collapse',()=>{
+  $("#btn1").text("Read Less");
+})
+$("#readMore").on('hide.bs.collapse',()=>{
+  $("#btn1").text("Read More");
+})
+
+
+</script>

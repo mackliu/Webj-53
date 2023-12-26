@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新一代設計展-Home</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- <nav class="navbar navbar-expand-lg justify-content-center px-5"> -->
+<!-- <nav class="navbar navbar-expand-lg justify-content-around px-5"> -->
+<!--導覽列-->
+<nav class="navbar navbar-expand-lg navbar-light justify-content-between px-5 bg-primary">
+
+    <!--活動logo放置區-->
+    <div class="navbar-brand">LOGO</div>
+
+    <!--快速指法 ul.navbar-nav>li.nav-item*4>a.nav-link -->
+    <!--功能按鈕導覽列-->
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+           <a href="home.html" class="nav-link">Home</a> 
+        </li>
+        <li class="nav-item">
+            <a href="news.html" class="nav-link">News</a> 
+        </li>
+        <li class="nav-item">
+          <a href="discover.html" class="nav-link">Discover</a>  
+        </li>
+        <li class="nav-item">
+          <a href="tickets.html" class="nav-link">Tickets</a>  
+        </li>
+    </ul>
+
+</nav>    
+<main>
+
+<!--輪播區-->
+<div id="Slider"  class="carousel slide my-2 mx-auto" data-ride="carousel" style="width:1000px;height:300px">
+    <!--輪播導覽按鈕,參考用-->
+    <ol class="carousel-indicators">
+        <li data-target="#Slider" data-slide-to="0" clas="active"></li>
+        <li data-target="#Slider" data-slide-to="1"></li>
+        <li data-target="#Slider" data-slide-to="2"></li>
+        <li data-target="#Slider" data-slide-to="3"></li>
+    </ol>
+
+    <!--輪播圖片區-->
+    <!--快速指法 div.caroulse-inner>div.carousel-item*4>img.d-block.w-100 -->
+    <div class="carousel-inner h-100" style="border-radius: 20px 5px 20px 5px;">
+        <div class="carousel-item active">
+            <img src="./img/slide-1.png" alt="" class="d-block w-100 h-100">
+            
+            <!--以半透明的方式強調並美化文字內容區-->
+            <div class="position-absolute p-2 mt-3 w-50" style="top:0;left:18%;background-color: rgba(255,255,255,0.7);">
+                <h2>標題一</h2>
+                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio mollitia, exercitationem cum iusto quis enim, necessitatibus nobis ab sequi porro neque, ducimus repellendus consequuntur officia. Nostrum voluptate consectetur reprehenderit sit!</div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="./img/slide-2.jpg" alt="" class="d-block w-100 h-100">
+            <div class="position-absolute p-2 mt-3 w-50" style="top:0;left:18%;background-color: rgba(255,255,255,0.7);">
+                <h2>標題二</h2>
+                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio mollitia, exercitationem cum iusto quis enim, necessitatibus nobis ab sequi porro neque, ducimus repellendus consequuntur officia. Nostrum voluptate consectetur reprehenderit sit!</div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="./img/slide-3.jpg" alt="" class="d-block w-100 h-100">
+            <div class="position-absolute p-2 mt-3 w-50" style="top:0;left:18%;background-color: rgba(255,255,255,0.7);">
+                <h2>標題三</h2>
+                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio mollitia, exercitationem cum iusto quis enim, necessitatibus nobis ab sequi porro neque, ducimus repellendus consequuntur officia. Nostrum voluptate consectetur reprehenderit sit!</div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="./img/slide-4.png" alt="" class="d-block w-100 h-100">
+            <div class="position-absolute p-2 mt-3 w-50" style="top:0;left:18%;background-color: rgba(255,255,255,0.7);">
+                <h2>標題四</h2>
+                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio mollitia, exercitationem cum iusto quis enim, necessitatibus nobis ab sequi porro neque, ducimus repellendus consequuntur officia. Nostrum voluptate consectetur reprehenderit sit!</div>
+            </div>
+        </div>
+    </div>
+    
+    <!--左右滑動控制按鈕-->
+    <button class="carousel-control-prev" data-target="#Slider" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" data-target="#Slider" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+</main>
+<!--copyright符號可在html中鍵入 &copy; 來呈現-->
+<footer  class="bg-primary fixed-bottom p-2 text-center w-100">Copyright © 2023 YODEX All Rights Reserved</footer>
+
+<script src="./jquery/jquery.js"></script>
+<script src="./bootstrap/bootstrap.js"></script>
+</body>
+</html>
+<script>
+//控制輪播間隔秒數
+$(".carousel").carousel({
+    interval:3000 //1000為1秒 
+})
+
+</script>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2023-12-26 04:08:38
--- 伺服器版本： 10.4.32-MariaDB
--- PHP 版本： 8.2.12
+-- 產生時間： 2023-02-11 06:29:29
+-- 伺服器版本： 10.4.27-MariaDB
+-- PHP 版本： 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,38 +18,41 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- 資料庫： `db01`
+-- 資料庫： `db25`
 --
 
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `users`
+-- 資料表結構 `tickets`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE `tickets` (
   `id` int(10) UNSIGNED NOT NULL,
-  `acc` text NOT NULL,
-  `pw` text NOT NULL,
-  `email` text NOT NULL
+  `first_name` varchar(16) NOT NULL,
+  `last_name` varchar(16) NOT NULL,
+  `phone` varchar(16) NOT NULL,
+  `password` varchar(16) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 傾印資料表的資料 `users`
+-- 傾印資料表的資料 `tickets`
 --
 
-INSERT INTO `users` (`id`, `acc`, `pw`, `email`) VALUES
-(1, 'admin', '1234', 'mackl@gmail.com'),
-(2, 'mack', '5678', 'dfasdfs');
+INSERT INTO `tickets` (`id`, `first_name`, `last_name`, `phone`, `password`) VALUES
+(1, 'Liu', '勤永', '0910345678', '1234'),
+(2, 'dfsafd', 'dsfadsafsdf', 'f342424', 'fasfdasf'),
+(4, 'hsu', 'shelly', '0999234567', '5678'),
+(5, '陳', '小明', '123456789', '2468');
 
 --
 -- 已傾印資料表的索引
 --
 
 --
--- 資料表索引 `users`
+-- 資料表索引 `tickets`
 --
-ALTER TABLE `users`
+ALTER TABLE `tickets`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -57,10 +60,10 @@ ALTER TABLE `users`
 --
 
 --
--- 使用資料表自動遞增(AUTO_INCREMENT) `users`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `tickets`
 --
-ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `tickets`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
