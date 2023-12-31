@@ -1,75 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新聞</title>
-    <link rel="stylesheet" href="bootstrap.css">    
+    <link rel="stylesheet" href="bootstrap.css">
 </head>
+
 <body>
-<div class="d-flex justify-content-between" style="height:60px">
-    <div class="col-6">LOGO</div>
-    <div class="nav col-3 align-items-center text-white justify-contet-right">
-        <a href="index.html" class='btn btn-info flex-fill px-3 py-1 mx-2'>Home</a>
-        <a href="news.html" class='btn btn-info flex-fill px-3 py-1 mx-2'>News</a>
-        <a href="discover.html" class='btn btn-info flex-fill px-3 py-1 mx-2'>Discover</a>
-        <a href="tickets.html" class='btn btn-info flex-fill px-3 py-1 mx-2'>Tickets</a>
+    <div class="d-flex justify-content-between bg-info mb-3" style="height:60px;box-shadow: 0 0 10px #999;">
+        <div class="col-6">LOGO</div>
+        <div class="nav col-6 align-items-center text-white justify-contet-right">
+            <a href="index.html" class='btn btn-info col-2 px-3 py-1 mx-2'>Home</a>
+            <a href="news.html" class='btn btn-info col-2 px-3 py-1 mx-2'>News</a>
+            <a href="discover.html" class='btn btn-info col-2 px-3 py-1 mx-2'>Discover</a>
+            <a href="tickets.html" class='btn btn-info col-2 px-3 py-1 mx-2'>Tickets</a>
+        </div>
     </div>
-</div>
-<div class="container">
-<table class="col-10 mx-auto my-5">
-    <tr>
-        <td class="w-50 relative">
-            <img src="./img/world-map.png" alt="" class="w-100">
-            <div class="star position-absolute btn btn-sm btn-outline-warning" id="n-01" style ="top:175px;left:350px;">
-                <img src="./img/star.png">
-                <span>Japanese</span>
-            </div>
-            <div class="star position-absolute btn btn-sm btn-outline-warning" id="n-02" style ="top:180px;left:65px;text-shadow:0 0 5px #999">
-                <img src="./img/star.png">
-                <span>American</span>
-            </div>
-            <div class="star position-absolute btn btn-sm btn-outline-warning" id="n-03" style ="top:130px;left:225px;text-shadow:0 0 5px #999">
-                <img src="./img/star.png">
-                <span>British</span>
-            </div>
-            <div class="star position-absolute btn btn-sm btn-outline-warning" id="n-04" style ="top:270px;left:135px;text-shadow:0 0 5px #999">
-                <img src="./img/star.png">
-                <span>Brazilian</span>
-            </div>
-            <div class="star position-absolute btn btn-sm btn-outline-warning" id="n-05" style ="top:180px;left:235px;text-shadow:0 0 5px #999">
-                <img src="./img/star.png">
-                <span>Italian</span>
-            </div>
-        </td>
-        <td class="w-50">
-            <div id="t-01" class="position-relative">
-                <img src="./img/news-01.png" alt="" class="w-100">
-                <div class="position-absolute h-25 text-white px-4 py-2" style="bottom:0;background-color: rgba(0,0,0,0.5);">
-                    A traditional Japanese restaurant in a quaint street of Kyoto, Japan. The restaurant exterior is characterized by classic wooden architecture with pap
-                </div>
-            </div>
-            <div id="t-02" class="position-relative d-none">
-                <img src="./img/news-02.png" alt="" class="w-100">
-                <div class="position-absolute h-25 text-white px-4 py-2" style="bottom:0;background-color: rgba(0,0,0,0.5);"></div>
-            </div>
-            <div id="t-03" class="position-relative d-none">
-                <img src="./img/news-03.png" alt="" class="w-100">
-                <div class="position-absolute h-25 text-white px-4 py-2" style="bottom:0;background-color: rgba(0,0,0,0.5);"></div>
-            </div>
-            <div id="t-04" class="position-relative d-none">
-                <img src="./img/news-04.png" alt="" class="w-100">
-                <div class="position-absolute h-25 text-white px-4 py-2" style="bottom:0;background-color: rgba(0,0,0,0.5);"></div>
-            </div>
-            <div id="t-05" class="position-relative d-none">
-                <img src="./img/news-05.png" alt="" class="w-100">
-                <div class="position-absolute h-25 text-white px-4 py-2" style="bottom:0;background-color: rgba(0,0,0,0.5);"></div>
-            </div>
-        </td>
-    </tr>
-</table>
-</div>
-<script src="./jquery-3.7.1.min.js"></script>
-<script src="./bootstrap.js"></script>    
+    <div class="container">
+        <table class="col-10 mx-auto my-5">
+            <tr>
+                <td class="w-50 relative">
+                    <img src="./img/world-map.png" alt="" class="w-100">
+                    <div class="star position-absolute" id="n-01" style="top:175px;left:350px;">
+                        <img src="./img/star.png">
+                        <span class=" btn btn-sm" style="background-color:rgba(200,200,200,0.7)">Japanese</span>
+                    </div>
+                    <div class="star position-absolute" id="n-02" style="top:180px;left:65px;text-shadow:0 0 5px #999">
+                        <img src="./img/star.png">
+                        <span class=" btn btn-sm" style="background-color:rgba(200,200,200,0.7)">American</span>
+                    </div>
+                    <div class="star position-absolute" id="n-03" style="top:130px;left:225px;text-shadow:0 0 5px #999">
+                        <img src="./img/star.png">
+                        <span class=" btn btn-sm" style="background-color:rgba(200,200,200,0.7)">British</span>
+                    </div>
+                    <div class="star position-absolute" id="n-04" style="top:270px;left:135px;text-shadow:0 0 5px #999">
+                        <img src="./img/star.png">
+                        <span class=" btn btn-sm" style="background-color:rgba(200,200,200,0.7)">Brazilian</span>
+                    </div>
+                    <div class="star position-absolute" id="n-05" style="top:180px;left:235px;text-shadow:0 0 5px #999">
+                        <img src="./img/star.png">
+                        <span class=" btn btn-sm" style="background-color:rgba(200,200,200,0.7)">Italian</span>
+                    </div>
+                </td>
+                <td class="w-50">
+                    <div id="t-01" class="news position-relative">
+                        <img src="./img/news-01.png" alt="" class="w-100">
+                        <div class="position-absolute h-25 text-white px-4 py-2"
+                            style="bottom:0;background-color: rgba(0,0,0,0.5);">
+                            A traditional Japanese restaurant in a quaint street of Kyoto, Japan. The restaurant
+                            exterior is characterized by classic wooden architecture with pap
+                        </div>
+                    </div>
+                    <div id="t-02" class="news position-relative d-none">
+                        <img src="./img/news-02.png" alt="" class="w-100">
+                        <div class="position-absolute h-25 text-white px-4 py-2"
+                            style="bottom:0;background-color: rgba(0,0,0,0.5);">
+                            A classic American diner located on a busy street in New York City. The diner features a
+                            retro 1950s theme with neon lights, a jukebox, and red leathe
+                        </div>
+                    </div>
+                    <div id="t-03" class="news position-relative d-none">
+                        <img src="./img/news-03.png" alt="" class="w-100">
+                        <div class="position-absolute h-25 text-white px-4 py-2"
+                            style="bottom:0;background-color: rgba(0,0,0,0.5);">
+                            A quaint British pub located in the heart of London. The pub is adorned with dark wood
+                            paneling, a cozy fireplace, and antique decorations, offering a
+                        </div>
+                    </div>
+                    <div id="t-04" class="news position-relative d-none">
+                        <img src="./img/news-04.png" alt="" class="w-100">
+                        <div class="position-absolute h-25 text-white px-4 py-2"
+                            style="bottom:0;background-color: rgba(0,0,0,0.5);">
+                            A vibrant Brazilian restaurant in the heart of Rio de Janeiro. The restaurant is lively and
+                            colorful, featuring bright murals, tropical plants, and rhyth
+                        </div>
+                    </div>
+                    <div id="t-05" class="news position-relative d-none">
+                        <img src="./img/news-05.png" alt="" class="w-100">
+                        <div class="position-absolute h-25 text-white px-4 py-2"
+                            style="bottom:0;background-color: rgba(0,0,0,0.5);">
+                            A charming Italian trattoria in a narrow, cobblestone street of Rome. The restaurant's
+                            exterior is adorned with climbing ivy and outdoor seating under
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="./bootstrap.js"></script>
 </body>
+
 </html>
+<script>
+    $(".star").click(function () {
+        var id = $(this).attr("id").replace("n", "t");
+        $(".news").addClass("d-none");
+        $("#" + id).removeClass("d-none");
+    })
+
+</script>
