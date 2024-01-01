@@ -29,43 +29,43 @@
         </table>
         <table class="my-2">
             <tr>
-                <td class="w-25"><img src="./img/pro01.png" style="width:100%"></td>
-                <td class="w-25"><img src="./img/pro02.png" style="width:100%"></td>
-                <td class="w-25"><img src="./img/pro03.png" style="width:100%"></td>
-                <td class="w-25"><img src="./img/pro04.png" style="width:100%"></td>
+                <td class="w-25 text-center"><img src="./img/pro01.png" style="width:80%"></td>
+                <td class="w-25 text-center"><img src="./img/pro02.png" style="width:80%"></td>
+                <td class="w-25 text-center"><img src="./img/pro03.png" style="width:80%"></td>
+                <td class="w-25 text-center"><img src="./img/pro04.png" style="width:80%"></td>
             </tr>
             <tr>
-                <td class="align-top pt-2"><h4>Smart Coffee Table:</h4>
+                <td class="align-top p-2"><h5>Smart Coffee Table:</h5>
                     <div>Modern, tech-integrated table with ambient lighting.</div>
-                    <div class="collapse" id="pro01">
+                    <div class="collapse my-2" id="pro01">
                         Ideal for the tech-savvy, this table offers convenience and style. It seamlessly integrates with smart home systems, providing functionality and a futuristic aesthetic for everyday living and entertaining.
                     </div>
-                    <button class="btn-primary" data-toggle="collapse" data-target="#pro01" aria-expanded="false" aria-controls="pro01">read more</button>
+                    <button class="btn-news btn btn-primary" data-toggle="collapse" data-target="#pro01" aria-expanded="false" aria-controls="pro01">read more</button>
                 </td>
-                <td class="align-top pt-2"><h4>Modular Sofa:</h4>
+                <td class="align-top p-2"><h5>Modular Sofa:</h5>
                     <div>Versatile, vibrant, and futuristic in design.</div>
-                    <div class="collapse" id="pro02">
+                    <div class="collapse my-2" id="pro02">
                         Perfect for modern interiors, it offers comfort and a bold style statement. This sofa is not just a piece of furniture but a centerpiece that reflects a modern lifestyle, adaptable to different layouts and occasions.
                     </div>
-                    <button class="btn-primary" data-toggle="collapse" data-target="#pro02" aria-expanded="false" aria-controls="pro02">read more</button>                    
+                    <button class="btn-news btn btn-primary" data-toggle="collapse" data-target="#pro02" aria-expanded="false" aria-controls="pro02">read more</button>                    
                 </td>
-                <td class="align-top pt-2"><h4>Eco-Friendly Bookshelf:</h4>
+                <td class="align-top p-2"><h5>Eco-Friendly Bookshelf:</h5>
                     <div>Stylishly sustainable, unique organic design.</div>
-                    <div class="collapse" id="pro03">
+                    <div class="collapse my-2" id="pro03">
                         Ideal for eco-conscious individuals, this bookshelf adds a natural, artistic touch to any room. It stands as a testament to environmentally responsible design, blending functionality with a commitment to the planet.
                     </div>
-                    <button class="btn-primary" data-toggle="collapse" data-target="#pro03" aria-expanded="false" aria-controls="pro03">read more</button>                    
+                    <button class="btn-news btn btn-primary" data-toggle="collapse" data-target="#pro03" aria-expanded="false" aria-controls="pro03">read more</button>                    
                 </td>
-                <td class="align-top pt-2"><h4>Minimalist Floating Bed:</h4>
+                <td class="align-top p-2"><h5>Minimalist Floating Bed:</h5>
                     <div>Sleek, minimalist design with a floating effect.</div>
-                    <div class="collapsee" id="pro04">
+                    <div class="collapsee my-2" id="pro04">
                         Beyond its aesthetic appeal, the bed includes practical features like hidden storage. It's a contemporary solution for those seeking a stylish yet functional bedroom piece, combining modern design with everyday utility.
                     </div>
-                    <button class="btn-primary" data-toggle="collapse" data-target="#pro04" aria-expanded="false" aria-controls="pro04">read more</button>
+                    <button class="btn-news btn btn-primary" data-toggle="collapse" data-target="#pro04" aria-expanded="false" aria-controls="pro04">read more</button>
                 </td>
             </tr>
         </table>
-        <div class="social text-center2" style="line-height: 1.5rem;">
+        <div class="social text-center" style="line-height: 1.5rem;">
             <img class="mx-2" src="./img/icon_facebook.png" style="width:32px">
             <img class="mx-2" src="./img/icon_youtube.png" style="width:32px">
             <img class="mx-2" src="./img/icon_instagram.png" style="width:32px">
@@ -79,3 +79,8 @@
 </body>
 
 </html>
+<script>
+$(".btn-news").click(function(){
+    $(this).text($(this).text() == 'read more' ? 'read less' : 'read more');
+})
+</script>
