@@ -105,10 +105,13 @@
 
 </html>
 <script>
-    $(".star").click(function () {
-        var id = $(this).attr("id").replace("n", "t");
-        $(".news").addClass("d-none");
-        $("#" + id).removeClass("d-none");
-    })
-
+//當.star被點擊時,執行以下程式    
+$(".star").click(function () {
+    //取得被點擊的.star的id,並將id的n透過replace這個函式改為t
+    let id = $(this).attr("id").replace("n", "t");
+    //將所有的.news隱藏
+    $(".news").addClass("d-none");
+    //將被點擊的.star對應的.news顯示
+    $("#" + id).removeClass("d-none");
+})
 </script>

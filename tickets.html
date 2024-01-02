@@ -22,7 +22,7 @@
     </div>
     <div class="container">
 
-        <form action="save.php" method="post" class="w-50 mx-auto my-5">
+        <form id="tickets" action="save.php" method="post" class="w-50 mx-auto my-5">
             <h2 class="text-center my-3">Order Ticket</h2>
             <table class="form-group">
                 <tr>
@@ -43,7 +43,12 @@
                 </tr>
                 <tr>
                     <td>Verification</td>
-                    <td><input type="text" class="form-control" name="verification" id="verification"></td>
+                    <td>
+                        <div  class="d-flex">
+                            <input type="text" class="form-control w-50 mr-1" name="ans" id="ans" maxlength="4">
+                            <div id="code" class="d-inline-block text-center font-weight-bolder w-50 border rounded px-2 bg-warning" style="font-size:28px;width: 38px;line-height: 36px;user-select:none"></div>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td><input type="submit" class="btn btn-primary" value="submit"></td>
@@ -63,5 +68,30 @@
     <script src="./jquery-3.7.1.min.js"></script>
     <script src="./bootstrap.js"></script>
 </body>
-
 </html>
+<script>
+//當網頁載入完成時,以AJAX方式向code.php取得驗證碼
+$.get("code.php", function(code) {
+    //將取得的驗證碼顯示在 #code 元素中
+    $("#code").html(code);
+})
+
+//當網頁上發生submit事件時,執行以下程式碼
+$("#tickets").on('submit', function (e) {
+    // 在表單提交時，阻止預設行為
+    e.preventDefault();
+
+    // 使用 AJAX 發送 GET 請求到 code.php，傳遞 ans 參數
+    $.get("code.php", { ans: $("#ans").val() }, function (result) {
+
+        // 如果返回的結果為數字 1，則提交表單
+        if (parseInt(result) == 1) {
+            $("#tickets").unbind('submit').submit();
+        } else {
+            // 否則彈出錯誤提示，並將結果顯示在 #code 元素中
+            alert("驗證碼錯誤，請重新輸入");
+            $("#code").text(result);
+        }
+    })
+})
+</script>
